@@ -11,15 +11,15 @@ class Nitro < Formula
 
   if OS.mac?
     url "https://github.com/craftcms/nitro/releases/download/2.0.0-beta.1/nitro_darwin_x86_64.tar.gz"
-    sha256 "06b106b950b4ec660e80c114922699fdaafe8b7afa6c9524a64ca021df4540db"
+    sha256 "68a958a5735ce9eaefa5b1392dd8f2d2e655a0f1041e221f60c4ac2a53e2f001"
   end
   if OS.linux? && Hardware::CPU.intel?
     url "https://github.com/craftcms/nitro/releases/download/2.0.0-beta.1/nitro_linux_x86_64.tar.gz"
-    sha256 "77a88d0d82d6c5a341925cb18c59899f5ea870f8f9df793420f83dcb53bf7b36"
+    sha256 "d6421539af8c79c22d16068237f7c84f88c3e6c01b869c6a9b7b66e24570cb57"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
     url "https://github.com/craftcms/nitro/releases/download/2.0.0-beta.1/nitro_linux_arm64.tar.gz"
-    sha256 "ff7c45346b3bebbc8f07d43cce0173ce04255432a1161445327f9048eed85977"
+    sha256 "9e0f4791cb1538e23bfedd7da03cf165536cbed6b0757f7e69d2d8f8c5a386ed"
   end
 
   def install
