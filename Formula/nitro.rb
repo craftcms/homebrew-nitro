@@ -9,9 +9,13 @@ class Nitro < Formula
   license "MIT"
   bottle :unneeded
 
-  if OS.mac?
+  if OS.mac? && Hardware::CPU.intel?
     url "https://github.com/craftcms/nitro/releases/download/2.0.0-beta.5/nitro_darwin_x86_64.tar.gz"
     sha256 "edc4b7c1a37e52f0a870568ed3a1988202187203c0c7ac81e1a728c2a6673ab5"
+  end
+  if OS.mac? && Hardware::CPU.arm?
+    url "https://github.com/craftcms/nitro/releases/download/2.0.0-beta.5/nitro_darwin_arm64.tar.gz"
+    sha256 "d4b5af2df6c6f785c0891bcfa68fdb44cab784c98619591712519428668675f9"
   end
   if OS.linux? && Hardware::CPU.intel?
     url "https://github.com/craftcms/nitro/releases/download/2.0.0-beta.5/nitro_linux_x86_64.tar.gz"
