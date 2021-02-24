@@ -5,25 +5,21 @@
 class Nitro < Formula
   desc "Nitro is a speedy Docker-based local development environment tuned for Craft CMS"
   homepage "https://getnitro.sh/"
-  version "2.0.0-beta.5"
+  version "2.0.0-beta.6"
   license "MIT"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/craftcms/nitro/releases/download/2.0.0-beta.5/nitro_darwin_x86_64.tar.gz"
-    sha256 "edc4b7c1a37e52f0a870568ed3a1988202187203c0c7ac81e1a728c2a6673ab5"
-  end
-  if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/craftcms/nitro/releases/download/2.0.0-beta.5/nitro_darwin_arm64.tar.gz"
-    sha256 "d4b5af2df6c6f785c0891bcfa68fdb44cab784c98619591712519428668675f9"
+    url "https://github.com/craftcms/nitro/releases/download/2.0.0-beta.6/nitro_darwin_x86_64.tar.gz"
+    sha256 "cf6d85b31c727f5af3e03dedd212f8e125209e995e882b94d4f4987658381599"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/craftcms/nitro/releases/download/2.0.0-beta.5/nitro_linux_x86_64.tar.gz"
-    sha256 "f9933469da35303dd5cfae094923734a78089ee112421488392ecfc774129767"
+    url "https://github.com/craftcms/nitro/releases/download/2.0.0-beta.6/nitro_linux_x86_64.tar.gz"
+    sha256 "37c30791997cc149311ec7831ed8718b330f920866c99aafb62e99ef98000f4f"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/craftcms/nitro/releases/download/2.0.0-beta.5/nitro_linux_arm64.tar.gz"
-    sha256 "44cd608026c4c3c2bfa216870279267101a1fffef195a3f9061a3cd3ff757a0a"
+    url "https://github.com/craftcms/nitro/releases/download/2.0.0-beta.6/nitro_linux_arm64.tar.gz"
+    sha256 "0ffee799ccd0ebe2a6c88f547c0f8272cadd5c0c12ce4ef4946aac81b15b5d66"
   end
 
   def install
