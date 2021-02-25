@@ -12,6 +12,10 @@ class Nitro < Formula
   if OS.mac? && Hardware::CPU.intel?
     url "https://github.com/craftcms/nitro/releases/download/2.0.0-beta.6/nitro_darwin_x86_64.tar.gz"
     sha256 "cf6d85b31c727f5af3e03dedd212f8e125209e995e882b94d4f4987658381599"
+  if OS.mac? && Hardware::CPU.arm?
+    url "https://github.com/craftcms/nitro/releases/download/2.0.0-beta.6/nitro_darwin_arm64.tar.gz"
+    sha256 "2a535893cc8b234fe3a5658d06b99c036851db2ad0b8191994cffc8a541a6fd6"
+  end  
   end
   if OS.linux? && Hardware::CPU.intel?
     url "https://github.com/craftcms/nitro/releases/download/2.0.0-beta.6/nitro_linux_x86_64.tar.gz"
