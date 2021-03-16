@@ -30,6 +30,16 @@ class Nitro < Formula
     bin.install "nitro"
   end
 
+  def caveats
+    <<~EOS
+
+      Next, initialize Nitro by running
+
+        nitro init
+
+    EOS
+  end
+
   test do
     system "#{bin}/nitro --version"
   end
