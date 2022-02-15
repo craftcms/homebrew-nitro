@@ -5,29 +5,45 @@
 class Nitro < Formula
   desc "Nitro is a speedy Docker-based local development environment tuned for Craft CMS"
   homepage "https://getnitro.sh/"
-  version "2.0.8"
+  version "2.0.9"
   license "MIT"
-  bottle :unneeded
 
-  if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/craftcms/nitro/releases/download/2.0.8/nitro_darwin_x86_64.tar.gz"
-    sha256 "76f1afa6a5991afa85af9aaeb34f00292acdf7e5b4ebfa21094fa6afb14c5e36"
-  end
-  if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/craftcms/nitro/releases/download/2.0.8/nitro_darwin_arm64.tar.gz"
-    sha256 "6ce93874766563ae8b6ae986a2ea61da104d49e196e910713042cf5719784e6e"
-  end
-  if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/craftcms/nitro/releases/download/2.0.8/nitro_linux_x86_64.tar.gz"
-    sha256 "465285d97128de8a988977d30d554c9270129f846d762d7b85717b67ac7c9bb2"
-  end
-  if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/craftcms/nitro/releases/download/2.0.8/nitro_linux_arm64.tar.gz"
-    sha256 "cf1ee8ceef908989da82d912b0ede2c6601455390ac019d327099859cf86391d"
+  on_macos do
+    if Hardware::CPU.arm?
+      url "https://github.com/craftcms/nitro/releases/download/2.0.9/nitro_darwin_arm64.tar.gz"
+      sha256 "86a6af02c6d45bf3c89e7149fa8f506610759eb94624e8fabcd677d37b03f725"
+
+      def install
+        bin.install "nitro"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/craftcms/nitro/releases/download/2.0.9/nitro_darwin_x86_64.tar.gz"
+      sha256 "1050d16bf7cf79a71496c863f91ef4b7b530fdba82d58820260713307a02f253"
+
+      def install
+        bin.install "nitro"
+      end
+    end
   end
 
-  def install
-    bin.install "nitro"
+  on_linux do
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/craftcms/nitro/releases/download/2.0.9/nitro_linux_arm64.tar.gz"
+      sha256 "2d127e2ee34625655bfe0625576338580341e18e017b70d75b2f3c34d4d90759"
+
+      def install
+        bin.install "nitro"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/craftcms/nitro/releases/download/2.0.9/nitro_linux_x86_64.tar.gz"
+      sha256 "5647ce78fcafb7e1db06bda2fd943b78ba28f8a05263c3cb885cf0be2a6f2523"
+
+      def install
+        bin.install "nitro"
+      end
+    end
   end
 
   def caveats; <<~EOS
