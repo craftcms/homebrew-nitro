@@ -5,21 +5,21 @@
 class Nitro < Formula
   desc "Nitro is a speedy Docker-based local development environment tuned for Craft CMS"
   homepage "https://getnitro.sh/"
-  version "2.0.9"
+  version "2.0.10"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/craftcms/nitro/releases/download/2.0.9/nitro_darwin_arm64.tar.gz"
-      sha256 "86a6af02c6d45bf3c89e7149fa8f506610759eb94624e8fabcd677d37b03f725"
+      url "https://github.com/craftcms/nitro/releases/download/2.0.10/nitro_darwin_arm64.tar.gz"
+      sha256 "6ff897bbbedb9dfcbf7b10c6a289d4ae99144fd030744b76e570dae21f4bdde5"
 
       def install
         bin.install "nitro"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/craftcms/nitro/releases/download/2.0.9/nitro_darwin_x86_64.tar.gz"
-      sha256 "1050d16bf7cf79a71496c863f91ef4b7b530fdba82d58820260713307a02f253"
+      url "https://github.com/craftcms/nitro/releases/download/2.0.10/nitro_darwin_x86_64.tar.gz"
+      sha256 "0158af848bd99f8b7ad72f99c8f1048792c319d8084d68b1f4b96786c1217773"
 
       def install
         bin.install "nitro"
@@ -29,16 +29,16 @@ class Nitro < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/craftcms/nitro/releases/download/2.0.9/nitro_linux_arm64.tar.gz"
-      sha256 "2d127e2ee34625655bfe0625576338580341e18e017b70d75b2f3c34d4d90759"
+      url "https://github.com/craftcms/nitro/releases/download/2.0.10/nitro_linux_arm64.tar.gz"
+      sha256 "78fd74383799d8d01fbd31fdc3ccf2cb308666a74a100415dd113d1e4eb5f100"
 
       def install
         bin.install "nitro"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/craftcms/nitro/releases/download/2.0.9/nitro_linux_x86_64.tar.gz"
-      sha256 "5647ce78fcafb7e1db06bda2fd943b78ba28f8a05263c3cb885cf0be2a6f2523"
+      url "https://github.com/craftcms/nitro/releases/download/2.0.10/nitro_linux_x86_64.tar.gz"
+      sha256 "231ec23b9be3bdb49acb426071e7dd34c72001bb0fbf568146d135cc6ac2feca"
 
       def install
         bin.install "nitro"
