@@ -11,7 +11,7 @@ class Nitro < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/craftcms/nitro/releases/download/2.0.10/nitro_darwin_arm64.tar.gz"
-      sha256 "6ff897bbbedb9dfcbf7b10c6a289d4ae99144fd030744b76e570dae21f4bdde5"
+      sha256 "4ba64c86d3a4e1f19261aa1b392e4e70bab5d29d5c9eca5896710f667a9dd3a3"
 
       def install
         bin.install "nitro"
@@ -19,7 +19,7 @@ class Nitro < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/craftcms/nitro/releases/download/2.0.10/nitro_darwin_x86_64.tar.gz"
-      sha256 "0158af848bd99f8b7ad72f99c8f1048792c319d8084d68b1f4b96786c1217773"
+      sha256 "456cee6ab0312fa2484f3f849556a43e5eba57911b16b1d1ef2972a7f545d267"
 
       def install
         bin.install "nitro"
@@ -30,7 +30,7 @@ class Nitro < Formula
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/craftcms/nitro/releases/download/2.0.10/nitro_linux_arm64.tar.gz"
-      sha256 "78fd74383799d8d01fbd31fdc3ccf2cb308666a74a100415dd113d1e4eb5f100"
+      sha256 "0964865f836127837565bdaefb5b1d342b52cb9e995f8500d7d49fb8f41f2acb"
 
       def install
         bin.install "nitro"
@@ -38,7 +38,7 @@ class Nitro < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/craftcms/nitro/releases/download/2.0.10/nitro_linux_x86_64.tar.gz"
-      sha256 "231ec23b9be3bdb49acb426071e7dd34c72001bb0fbf568146d135cc6ac2feca"
+      sha256 "3babc3147c1a85ebd95139059f0f01a4c08c11c5a2130099b6e7694d50b66a77"
 
       def install
         bin.install "nitro"
